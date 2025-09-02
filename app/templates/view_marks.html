@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}View Marks{% endblock %}
+{% block content %}
+  <h2>Marks Records</h2>
+  {% for mark in marks %}
+    <p>{{ mark.roll_number }} - {{ mark.subject }} - {{ mark.marks }}</p>
+  {% endfor %}
+{% endblock %}
