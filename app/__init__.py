@@ -13,8 +13,6 @@ def create_app():
     jwt.init_app(app)
 
     from app.routes import auth, student, achievement, validation, portfolio
-    from app.routes import bp as main_bp
-    app.register_blueprint(main_bp)
     app.register_blueprint(auth.bp)
     app.register_blueprint(student.bp)
     app.register_blueprint(achievement.bp)
