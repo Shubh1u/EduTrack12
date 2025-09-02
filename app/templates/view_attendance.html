@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}View Attendance{% endblock %}
+{% block content %}
+  <h2>Attendance Records</h2>
+  {% for record in attendance %}
+    <p>{{ record.roll_number }} - {{ record.date }} - {{ record.status }}</p>
+  {% endfor %}
+{% endblock %}
