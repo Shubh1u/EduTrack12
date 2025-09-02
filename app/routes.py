@@ -1,6 +1,13 @@
 from flask import render_template, request, redirect, url_for, session
 from app import app, db
 from app.models import User, Student, Attendance, Marks
+from flask import Blueprint, render_template
+
+bp = Blueprint('main', __name__)
+
+@bp.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/')
 def index():
